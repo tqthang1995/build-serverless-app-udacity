@@ -1,7 +1,7 @@
 # DONE: Change the name of the org 
-org: thangdev
-app: thangdev-serverless
-service: serverless-todo-app
+org: tqthang1995
+app: aws-node
+service: serverless-todo-app-4
 
 plugins:
   - serverless-webpack
@@ -10,7 +10,7 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   lambdaHashingVersion: '20201221'
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
@@ -24,7 +24,7 @@ provider:
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    ATTACHMENT_S3_BUCKET: thangdev-serverless-c4-todo-images-${self:provider.stage}
+    ATTACHMENT_S3_BUCKET: tqthang1995-serverless-c4-todo-images-new1-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
 
   logs:
